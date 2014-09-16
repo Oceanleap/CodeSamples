@@ -565,44 +565,6 @@ static NSString* const kSavedUser = @"savedUser";
 	}] resume];
 }
 
-/*
-#pragma mark - User Profile
-
-- (void) getUserProfileForID:(NSNumber*)userID completion:(void (^)(id object, NSString *customError, NSError *error))completionBlock {
-	NSURLSessionConfiguration * config = [NSURLSessionConfiguration defaultSessionConfiguration];
-	config.HTTPAdditionalHeaders = @{@"Content-Type" : @"application/json", @"OceanleapApplicationKey": APPLICATION_KEY, @"Authorization" : self.me.authorization};
-
-    NSURLSession * session = [NSURLSession sessionWithConfiguration:config];
-
-	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:
-									[NSURL URLWithString:[NSString stringWithFormat:@"https://api.oceanleap.com/api/v1/user-profiles/%@/",[userID stringValue]]]];
-	[request setHTTPMethod:@"GET"];
-
-	[[session dataTaskWithRequest:request completionHandler:^(NSData *data,
-															  NSURLResponse *response,
-															  NSError *error) {
-
-		if (!error) {
-			if ([[self parsedJson:data] isKindOfClass:[NSDictionary class]]) {
-				NSDictionary* responseDict = [self parsedJson:data];
-				NSLog(@"User responseDict: %@",responseDict);
-				if (!responseDict || responseDict[@"error_message"]) {
-					NSString* errorMsg = responseDict ? responseDict[@"error_message"] : @"Invalid Response Received";
-					completionBlock(nil, errorMsg, nil);
-				} else {
-					completionBlock(responseDict, nil, nil);
-				}
-			} else {
-				completionBlock(nil, @"We encountered an error while trying to get your data. Please try again later.", nil);
-			}
-		} else { //connection failure
-			NSLog(@"error : %@", error.localizedDescription);
-			completionBlock(nil, nil, error);
-		}
-	}] resume];
-}
-*/
-
 #pragma mark - Interplayer communication
 
 - (void) messagePlayerWithUserID:(NSNumber *)userID challengeID:(NSString *)challengeID andType:(NSNumber *)type completion:(void (^)(id object, NSString *customError, NSError *error))completionBlock {
