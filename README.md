@@ -1,7 +1,7 @@
 CodeSamples
 ===========
 
-This repository contains example code and projects designed to speed up the process of integrating the Oceanleap platform in your App.
+This repository contains example code and projects designed to speed up the process of integrating the Oceanleap platform into your App.
 
 Before you can take the OLDemo Project for a test drive please go to the URL below to get your access key:
 
