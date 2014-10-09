@@ -22,16 +22,12 @@
 #define API_USERS_SUGGESTED						@"user/find-users/suggested/"
 #define API_USERS_RECENT						@"user/find-users/recent/"
 #define API_USERS_INVITED						@"user/find-users/invited/"
-#define API_FITBIT_DEVICE						@"user/fitbit-devices/"
 #define API_ASSOCIATE_USER_DEVICE				@"devices/user-associate/"
-#define API_DEVICE_REGISTER						@"fitness-device/register/"
 #define API_USER_DEVICES						@"users/devices/"
 
 #define API_POST_ACTIVITY_DATA					@"activities/data/"
 #define API_DEVICE_LAST_TIME_SYNC				@"devices/last-sync-time/"
-#define API_ACTIVITY_LIFETIME					@"activity-analytics/lifetime/"
 
-#define API_SENSOPLEX_DEVICE_POST_DATA			@"sensoplex/post/"
 #define API_SIGNUP                              @"users/register/"
 #define API_FACEBOOK_SIGNUP                     @"user/facebook-connect/"
 #define API_UPDATE_USER_PROFILE					@"user-profiles/update/"
@@ -46,7 +42,6 @@
 #define API_NOTIFICATION_LIST                   @"notification/"
 #define API_NOTIFICATION_CLEAR                  @"notification/clear/"
 #define API_NOTIFICATION_READ					@"notification/read/"
-#define API_NOTIFICATION_NUDGE					@"notification/taunt-cheer/"
 #define API_VERIFY_USER                         @"users/verify-credentials/"
 
 #define API_HOSTNAME								@"https://api.oceanleap.com/"
@@ -65,43 +60,5 @@
 
 //error string
 #define PARSING_ERROR @"Error while parsing response from the server"
-
-//constants
-#define STATUS_ACTIVE @"active"
-#define STATUS_UPCOMING @"future"
-#define STATUS_PAST @"concluded"
-
-#define DEVICE_TOKEN @"DeviceToken"
-#define STORED_RECIPIENTS @"StoredRecipients"
-
-//Notifications
-#define REMOTE_NOTIFICATION_RECEIVED                @"RemoteNotificationReceived"
-#define NOTIFICATION_CONTACTS_SELECTED              @"ConstactsSelected"
-#define NOTIFICATION_CHALLENGE_SELECTED             @"NOTIFICATION_CHALLENGE_SELECTED"
-#define NOTIFICATION_NOTIFICATIONS_REFRESHED        @"NOTIFICATION_NOTIFICATIONS_REFRESHED"
-#define NOTIFICATION_NOTIFICATIONS_SCREEN_SELECTED  @"NOTIFICATION_NOTIFICATIONS_SCREEN_SELECTED"
-#define NOTIFICATION_CREATE_NEW_CHALLENGE           @"NOTIFICATION_CREATE_NEW_CHALLENGE"
-#define NOTIFICATION_HOME_SCREEN_SELECTED           @"NOTIFICATION_HOME_SCREEN_SELECTED"
-#define NOTIFICATION_MY_PROFILE_SCREEN_SELECTED     @"NOTIFICATION_MY_PROFILE_SCREEN_SELECTED"
-#define NOTIFICATION_LOGOUT                         @"NOTIFICATION_LOGOUT"
-#define NOTIFICATION_MAIN_NAVCONTROLLER_LOADED      @"NOTIFICATION_MAIN_NAVCONTROLLER_LOADED"
-
-//Invite Flows
-typedef enum
-{
-    InviteFlowTypeNewChallenge,
-    InviteFlowTypeExistingChallange
-}InviteFlowType;
-
-typedef enum
-{
-    OLNotificationTypeInvite		= 0,
-    OLNotificationTypeRankChange	= 1,
-    OLNotificationTypeJoin			= 2,
-    OLNotificationTypeEnded			= 3,
-    OLNotificationTypeStarted		= 4,
-    OLNotificationTypeTaunt			= 5,
-    OLNotificationTypeCheer			= 6
-}OLNotificationType;
 
 #endif

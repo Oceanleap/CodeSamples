@@ -116,7 +116,7 @@
 
 - (IBAction)postDataPressed:(id)sender {
 	double timestamp = [[NSDate date] timeIntervalSince1970] - 5000.0;
-	NSArray * dataset = @[@{@"measurement":@1, @"value":@19, @"timestamp":@(timestamp)}];
+	NSArray * dataset = @[@{@"measurement":@"steps", @"value":@19, @"timestamp":@(timestamp)},@{@"measurement":@"steps", @"value":@19, @"timestamp":@(timestamp-3000)},@{@"measurement":@"steps", @"value":@19, @"timestamp":@(timestamp-1111)}];
 
 	NSDictionary * postDict = @{@"activity_type":@"walking",@"device_uuid":DEVICE_UUID,@"sync_method":@1,@"sync_time":@(timestamp),@"dataset":dataset};
 
